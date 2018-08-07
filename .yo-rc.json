@@ -4,7 +4,7 @@
       "type": "general"
     },
     "answers": {
-      "name": "Energielabel",
+      "name": "EnergielabelPlugin",
       "author": "Jan Hendrik Hansen",
       "license": "MIT",
       "shortDescription": "Plugin zur Anzeige der dem Produkt entsprechenden Energielabel",

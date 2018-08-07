@@ -1,6 +1,6 @@
 <?php
 
-namespace Energielabel\Providers;
+namespace EnergielabelPlugin\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 

@@ -6,7 +6,7 @@ use Plenty\Plugin\ServiceProvider;
 
 /**
  * Class EnergielabelServiceProvider
- * @package Energielabel\Providers
+ * @package Energieeffizienzlabel\Providers
  */
 class EnergielabelServiceProvider extends ServiceProvider
 {

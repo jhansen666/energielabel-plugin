@@ -9,8 +9,8 @@
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
-           {# {{ prop.property.names.name }}:  {{ prop.texts.value }} #}
-           {{ prop.texts.value }}
+           {# {{ prop.property.names.name }}:  {{ prop.texts.value }} 
+           {{ prop.texts.value }} #}
            {% set energieEffizienz = prop.texts.value %}
         {% endif %}
         {% if prop.property.id in [492, 493, 494, 495, 496] %}
@@ -32,8 +32,8 @@
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
         <div class="col-md-4">
-            <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}</p>
-            <i style="width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left : 20px solid {{ effizienzLabelEinzelfarbe }};"></i>
+            <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}<i style="width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-left : 20px solid {{ effizienzLabelEinzelfarbe }};"></i></p>
+            
         </div>
     </div>
 {% endif %}

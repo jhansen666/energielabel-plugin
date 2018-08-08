@@ -34,11 +34,12 @@
         <div class="col-md-4">
         <style>
          .elabel::after{
+                content: " ";
                 width: 0px;
                 height: 0px;
                 border-top: 30px solid transparent;
                 border-bottom: 30px solid transparent;
-                border-left: 30px solid {{ effizienzLabelEinzelfarbe }};
+                border-left: 30px solid {{ effizienzLabelEinzelfarbe }};  
          }
         </style>
             <p class="elabel" style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}</p>     

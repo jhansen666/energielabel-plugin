@@ -1,4 +1,19 @@
 {# <p>Hey</p> #} 
+<style>
+    /* Rahmen nur an einer Seite einblenden */
+    border-style:solid;
+    border-width:50px;
+
+    /* Pseudo-Element stylebar machen */
+    content:" ";
+    display:block;
+    height:0;
+    width:0;
+
+    /* Pseudo-Element positionieren */
+    left:0;
+    position:absolute;
+</style>
 {% set effizienzLabelWerte = ['A+++', 'A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G'] %}
 {% set effizienzLabelFarben = ['#009136','#58A927','#C8D000','#FCEA00','#F9B900','#EA690B','#E3001B'] %}
 {% set energieEffizienz = "" %}
@@ -32,7 +47,7 @@
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
         <div class="col-md-4">
-            <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}<i style="width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-left : 20px solid {{ effizienzLabelEinzelfarbe }};"></i></p>
+            <p style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}<i style="border-color:transparent transparent transparent {{ effizienzLabelEinzelfarbe }};"></i></p>
             
         </div>
     </div>

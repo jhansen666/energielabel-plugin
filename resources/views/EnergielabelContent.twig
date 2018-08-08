@@ -31,7 +31,7 @@
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
-        <div class="col-md-4 elabel">
+        <div class="col-md-6 elabel">
         <style>
          .elabel::after{
                 content: " ";
@@ -42,7 +42,7 @@
                 border-left: 30px solid {{ effizienzLabelEinzelfarbe }};  
          }
         </style>
-            <span style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px;">{{ energieEffizienz }}</span>     
+            <span style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     
         </div>
     </div>
 {% endif %}

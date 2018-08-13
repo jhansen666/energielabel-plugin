@@ -43,7 +43,7 @@
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
-        {{ energieEffizienzName }}
+        <p>{{ energieEffizienzName }}:</p>
         <div class="col-md-6 elabel">
         <style>
          .elabel::after{
@@ -67,7 +67,7 @@
 
 {% if energieEffizienzZwei is not empty and hoechsteEffizienzZwei is not empty %}
     {% for wert in effizienzLabelWerte %}
-        {% if wert == energieEffizienz %}
+        {% if wert == energieEffizienzZwei %}
             {% set wertIndex = loop.index %}
         {% elseif wert == hoechsteEffizienzZwei %}
             {% set hoechsteEffizienzIndex = loop.index %}
@@ -78,7 +78,7 @@
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
-        {{ energieEffizienzNameZwei }}
+        <p>{{ energieEffizienzNameZwei }}:</p>
         <div class="col-md-6 elabel">
         <style>
          .elabel::after{

@@ -81,10 +81,20 @@
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
         <p>{{ energieEffizienzNameZwei }}:</p>
-        <div class="col-md-6 elabel">
+        <div class="col-md-6 elabelzwei">
         <style>
-         .elabel::after{
-                border-left: 20px solid {{ effizienzLabelEinzelfarbeZwei }};  
+         .elabelzwei::after{
+            content: " ";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: 50%;
+            right: 21%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            border-top: 15.5px solid transparent;
+            border-bottom: 15.5px solid transparent;
+            border-left: 20px solid {{ effizienzLabelEinzelfarbeZwei }};  
          }
         </style>
             <span style="background-color:{{ effizienzLabelEinzelfarbeZwei }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     

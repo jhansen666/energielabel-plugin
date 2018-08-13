@@ -70,13 +70,13 @@
 {% if energieEffizienzZwei is not empty and hoechsteEffizienzZwei is not empty %}
     {% for wert in effizienzLabelWerte %}
         {% if wert == energieEffizienzZwei %}
-            {% set wertIndex = loop.index %}
+            {% set wertIndexZwei = loop.index %}
         {% elseif wert == hoechsteEffizienzZwei %}
-            {% set hoechsteEffizienzIndex = loop.index %}
+            {% set hoechsteEffizienzIndexZwei = loop.index %}
         {% endif %}
     {% endfor %}
-    {% set farbenIndex = wertIndex - hoechsteEffizienzIndex  %}
-    {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
+    {% set farbenIndexZwei = wertIndexZwei - hoechsteEffizienzIndexZwei  %}
+    {% set effizienzLabelEinzelfarbeZwei = effizienzLabelFarben[farbenIndexZwei] %}
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
@@ -84,10 +84,10 @@
         <div class="col-md-6 elabel">
         <style>
          .elabel::after{
-                border-left: 20px solid {{ effizienzLabelEinzelfarbe }};  
+                border-left: 20px solid {{ effizienzLabelEinzelfarbeZwei }};  
          }
         </style>
-            <span style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     
+            <span style="background-color:{{ effizienzLabelEinzelfarbeZwei }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     
         </div>
     </div>
 {% endif %}

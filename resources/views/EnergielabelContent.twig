@@ -45,7 +45,7 @@
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
-        <p>{{ energieEffizienzName }}:</p>
+        <span>{{ energieEffizienzName }}:</span>
         <div class="col-md-6 elabel">
         <style>
          .elabel::after{
@@ -77,10 +77,12 @@
     {% endfor %}
     {% set farbenIndexZwei = wertIndexZwei - hoechsteEffizienzIndexZwei  %}
     {% set effizienzLabelEinzelfarbeZwei = effizienzLabelFarben[farbenIndexZwei] %}
+    {% set energieEffizienzNameZwei = energieEffizienzNameZwei | split('(') %}
+    {% set energieEffizienzNameZwei = energieEffizienzNameZwei[1] | split(')') %}
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
-        <p>{{ energieEffizienzNameZwei }}:</p>
+        <span>{{ energieEffizienzNameZwei[0] }}:</span>
         <div class="col-md-6 elabelzwei">
         <style>
          .elabelzwei::after{

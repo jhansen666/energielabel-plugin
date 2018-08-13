@@ -7,6 +7,8 @@
 {% set hoechsteEffizienzZwei = "" %}
 {% set wertIndex = 0 %}
 {% set hoechsteEffizienzIndex = 0 %}
+{% set energieEffizienzName = "" %}
+{% set energieEffizienzNameZwei = "" %}
 {% for prop in item.documents[0].data.properties %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}

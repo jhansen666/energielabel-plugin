@@ -13,15 +13,19 @@
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
            {# {{ prop.property.names.name }}:  {{ prop.texts.value }} 
            {{ prop.texts.value }} #}
-           {% set energieEffizienz = prop.texts.value %}
-           {% if energieEffizienz is not empty %}
+           {% if energieEffizienz is not empty and energieEffizienzName is not empty %}
                 {% set energieEffizienzZwei = prop.texts.value %}
+                {% set energieEffizienzNameZwei = prop.property.names.name %}
+            {% else %}
+                {% set energieEffizienz = prop.texts.value %}
+                {% set energieEffizienzName = prop.property.names.name %}
            {% endif %}
         {% endif %}
         {% if prop.property.id in [492, 493, 494, 495, 496] %}
-            {% set hoechsteEffizienz = prop.texts.value %}
             {% if hoechsteEffizienz is not empty %}
                 {% set hoechsteEffizienzZwei = prop.texts.value %}
+            {% else %}
+                {% set hoechsteEffizienz = prop.texts.value %}
             {% endif %}
         {% endif %}
     {% endif %}
@@ -39,6 +43,7 @@
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
+        {{ energieEffizienzName }}
         <div class="col-md-6 elabel">
         <style>
          .elabel::after{
@@ -73,6 +78,7 @@
     {# {{ farbenIndex }}
     {{ effizienzLabelEinzelfarbe }} #}
     <div class="row">
+        {{ energieEffizienzNameZwei }}
         <div class="col-md-6 elabel">
         <style>
          .elabel::after{

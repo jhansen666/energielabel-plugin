@@ -9,7 +9,7 @@
       "license": "MIT",
       "shortDescription": "Plugin zur Anzeige der dem Produkt entsprechenden Energielabel",
       "price": 0,
-      "version": "0.0.1",
+      "version": "0.7.0",
       "categories": [],
       "type": "general"
     }

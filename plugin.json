@@ -1,5 +1,5 @@
 {
-    "version"           :   "0.0.1",
+    "version"           :   "0.7.0",
     "license"           :   "MIT",
     "name"              :   "Energieeffizienzlabel",
     "shortDescription"  :   { "de": "Plugin zur Anzeige der Energielabel", "en": "TODO add manually" },

@@ -3,6 +3,8 @@
 {% set effizienzLabelFarben = ['#009136','#58A927','#C8D000','#FCEA00','#F9B900','#EA690B','#E3001B'] %}
 {% set energieEffizienz = "" %}
 {% set hoechsteEffizienz = "" %}
+{% set energieEffizienzZwei = "" %}
+{% set hoechsteEffizienzZwei = "" %}
 {% set wertIndex = 0 %}
 {% set hoechsteEffizienzIndex = 0 %}
 {% for prop in item.documents[0].data.properties %}
@@ -12,9 +14,15 @@
            {# {{ prop.property.names.name }}:  {{ prop.texts.value }} 
            {{ prop.texts.value }} #}
            {% set energieEffizienz = prop.texts.value %}
+           {% if energieEffizienz is not empty %}
+                {% set energieEffizienzZwei = prop.texts.value %}
+           {% endif %}
         {% endif %}
         {% if prop.property.id in [492, 493, 494, 495, 496] %}
             {% set hoechsteEffizienz = prop.texts.value %}
+            {% if hoechsteEffizienz is not empty %}
+                {% set hoechsteEffizienzZwei = prop.texts.value %}
+            {% endif %}
         {% endif %}
     {% endif %}
 {% endfor %}
@@ -44,6 +52,30 @@
                 display: inline-block;
                 border-top: 15.5px solid transparent;
                 border-bottom: 15.5px solid transparent;
+                border-left: 20px solid {{ effizienzLabelEinzelfarbe }};  
+         }
+        </style>
+            <span style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     
+        </div>
+    </div>
+{% endif %}
+
+{% if energieEffizienzZwei is not empty and hoechsteEffizienzZwei is not empty %}
+    {% for wert in effizienzLabelWerte %}
+        {% if wert == energieEffizienz %}
+            {% set wertIndex = loop.index %}
+        {% elseif wert == hoechsteEffizienzZwei %}
+            {% set hoechsteEffizienzIndex = loop.index %}
+        {% endif %}
+    {% endfor %}
+    {% set farbenIndex = wertIndex - hoechsteEffizienzIndex  %}
+    {% set effizienzLabelEinzelfarbe = effizienzLabelFarben[farbenIndex] %}
+    {# {{ farbenIndex }}
+    {{ effizienzLabelEinzelfarbe }} #}
+    <div class="row">
+        <div class="col-md-6 elabel">
+        <style>
+         .elabel::after{
                 border-left: 20px solid {{ effizienzLabelEinzelfarbe }};  
          }
         </style>

@@ -50,7 +50,7 @@
         <div class="col-md-4 col-sm-4">    
             <p class="energieEffizienzKategorie">{{ energieEffizienzName[0] }}:</p>
         </div>
-        <div class="col-md-6 col-sm-6 elabel">
+        <div class="col-md-6 col-sm-4 elabel">
         <style>
          .energieEffizienzKategorie{
              padding-top: 0.3em;
@@ -67,10 +67,16 @@
                 display: inline-block;
                 border-top: 15.5px solid transparent;
                 border-bottom: 15.5px solid transparent;
-                border-left: 20px solid {{ effizienzLabelEinzelfarbe }};  
+                border-left: 19px solid {{ effizienzLabelEinzelfarbe }};  
+         }
+         @media(max-width: 1200px)
+         {
+            .label{
+                width: 50% !important;
+            }
          }
         </style>
-            <span style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     
+            <span class="label" style="background-color:{{ effizienzLabelEinzelfarbe }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%; position: absolute;">{{ energieEffizienz }}</span>     
         </div>
     </div>
 {% endif %}
@@ -93,7 +99,7 @@
         <div class="col-md-4 col-sm-4">
             <p class="energieEffizienzKategorie">{{ energieEffizienzNameZwei[0] }}:</p>
         </div>
-        <div class="col-md-6 col-sm-6 elabelzwei">
+        <div class="col-md-6 col-sm-4 elabelzwei">
         <style>
          .elabelzwei::after{
             content: " ";
@@ -106,10 +112,10 @@
             display: inline-block;
             border-top: 15.5px solid transparent;
             border-bottom: 15.5px solid transparent;
-            border-left: 20px solid {{ effizienzLabelEinzelfarbeZwei }};  
+            border-left: 19px solid {{ effizienzLabelEinzelfarbeZwei }};  
          }
         </style>
-            <span style="background-color:{{ effizienzLabelEinzelfarbeZwei }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%; position: absolute;">{{ energieEffizienz }}</span>     
+            <span class="label" style="background-color:{{ effizienzLabelEinzelfarbeZwei }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%; position: absolute;">{{ energieEffizienz }}</span>     
         </div>
     </div>
 {% endif %}

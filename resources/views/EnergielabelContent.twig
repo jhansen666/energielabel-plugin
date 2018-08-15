@@ -38,7 +38,8 @@
     {% for wert in effizienzLabelWerte %}
         {% if wert == energieEffizienz %}
             {% set wertIndex = loop.index %}
-        {% elseif wert == hoechsteEffizienz %}
+        {% endif %}
+        {% if wert == hoechsteEffizienz %}
             {% set hoechsteEffizienzIndex = loop.index %}
         {% endif %}
     {% endfor %}
@@ -87,8 +88,9 @@
     {% for wert in effizienzLabelWerte %}
         {% if wert == energieEffizienzZwei %}
             {% set wertIndexZwei = loop.index %}
-        {% elseif wert == hoechsteEffizienzZwei %}
-            {% set hoechsteEffizienzIndexZwei = loop.index %}
+        {% endif %}
+        {% if wert == hoechsteEffizienzZwei %}
+            {% set hoechsteEffizienzIndexZwei = loop.index %}}
         {% endif %}
     {% endfor %}
     {% set farbenIndexZwei = wertIndexZwei - hoechsteEffizienzIndexZwei  %}

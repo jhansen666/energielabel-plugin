@@ -18,7 +18,7 @@
            {% if energieEffizienz is not empty and energieEffizienzName is not empty %}
                 {% set energieEffizienzZwei = prop.texts.value %}
                 {% set energieEffizienzNameZwei = prop.property.names.name %}
-            {% elseif energieEffizienzZwei is empty and energieEffizienzNameZwei is empty %}
+            {% else %}
                 {% set energieEffizienz = prop.texts.value %}
                 {% set energieEffizienzName = prop.property.names.name %}
            {% endif %}
@@ -115,7 +115,7 @@
             border-left: 19px solid {{ effizienzLabelEinzelfarbeZwei }};  
          }
         </style>
-            <span class="label" style="background-color:{{ effizienzLabelEinzelfarbeZwei }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienz }}</span>     
+            <span class="label" style="background-color:{{ effizienzLabelEinzelfarbeZwei }}; color: white; text-align: center; font-weight: bold; font-size: 20px; display: inline-block; width: 70%;">{{ energieEffizienzZwei }}</span>     
         </div>
     </div>
 {% endif %}

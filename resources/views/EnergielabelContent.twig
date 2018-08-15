@@ -18,7 +18,7 @@
            {% if energieEffizienz is not empty and energieEffizienzName is not empty %}
                 {% set energieEffizienzZwei = prop.texts.value %}
                 {% set energieEffizienzNameZwei = prop.property.names.name %}
-            {% else %}
+            {% elseif energieEffizienzZwei is empty and energieEffizienzNameZwei is empty %}
                 {% set energieEffizienz = prop.texts.value %}
                 {% set energieEffizienzName = prop.property.names.name %}
            {% endif %}

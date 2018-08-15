@@ -17,20 +17,17 @@
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
            {# {{ prop.property.names.name }}:  {{ prop.texts.value }} 
            {{ prop.texts.value }} #}
-           {% if energieEffizienz is not empty and energieEffizienzName is not empty %}
+            {% set energieEffizienz = prop.texts.value %}
+            {% set energieEffizienzName = prop.property.names.name %}
+            {% if energieEffizienz is not empty and energieEffizienzName is not empty %}
                 {% set energieEffizienzZwei = prop.texts.value %}
                 {% set energieEffizienzNameZwei = prop.property.names.name %}
-            {% else %}
-                {% set energieEffizienz = prop.texts.value %}
-                {% set energieEffizienzName = prop.property.names.name %}
-           {% endif %}
+            {% endif %}
         {% endif %}
         {% if prop.property.id in [493, 492, 496, 495, 494 ] %}
+            {% set hoechsteEffizienz = prop.texts.value %}
             {% if hoechsteEffizienz is not empty %}
                 {% set hoechsteEffizienzZwei = prop.texts.value %}
-            {% else %}
-                {% set hoechsteEffizienz = prop.texts.value %}
-            {% endif %}
         {% endif %}
     {% endif %}
 {% endfor %}

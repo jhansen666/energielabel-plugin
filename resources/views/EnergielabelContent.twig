@@ -14,7 +14,7 @@
 {% set energieEffizienzNameZwei = "" %}
 {% set test = "test" %}
 {{ test }}
-{% if item.data.properties is empty %}
+{% if item.data.properties is null or item.data.properties is not defined %}
     {% set eigenschaften = item.documents[0].data.properties %}
 {% else %}
     {% set eigenschaften = item.data.properties %}

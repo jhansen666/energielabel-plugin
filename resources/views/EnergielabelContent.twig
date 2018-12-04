@@ -13,7 +13,7 @@
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
 {% if item.data.properties is empty %}
-    {% set eigenschaften = item.document[0].data.properties %}
+    {% set eigenschaften = item.documents[0].data.properties %}
 {% else %}
     {% set eigenschaften = item.data.properties %}
 {% endif %}

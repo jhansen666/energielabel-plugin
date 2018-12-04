@@ -12,7 +12,12 @@
 {% set hoechsteEffizienzIndexZwei = 0 %}
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
-{% for prop in item.data.properties %}
+{% if item.data.properties is empty %}
+    {% set eigenschaften = item.document[0].data.properties %}
+{% else %}
+    {% set eigenschaften = item.data.properties %}
+{% endif %}
+{% for prop in eigenschaften %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}

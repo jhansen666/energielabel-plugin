@@ -12,7 +12,7 @@
 {% set hoechsteEffizienzIndexZwei = 0 %}
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
-{% if item.documents[0].data.properties or item.documents[0].data.properties is not defined %}
+{% if item.documents[0].data.properties is none %}
     {% set eigenschaften = item.data.properties %}
 {% else %}
     {% set eigenschaften = item.documents[0].data.properties %}

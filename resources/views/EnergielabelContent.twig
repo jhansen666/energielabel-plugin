@@ -17,7 +17,6 @@
 {% else %}
     {% set eigenschaften = item.documents[0].data.properties %}
 {% endif %}
-{% set eigenschaften = item.data.properties %}
 {% for prop in eigenschaften %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}

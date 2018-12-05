@@ -14,8 +14,10 @@
 {% set energieEffizienzNameZwei = "" %}
 {% if item.documents[0].data.properties is none %}
     {% set eigenschaften = item.data.properties %}
+    <p>Zweig 1</p>
 {% else %}
     {% set eigenschaften = item.documents[0].data.properties %}
+    <p>Zweig 2</p>
 {% endif %}
 {% for prop in eigenschaften %}
     {% if prop.group.names.propertyGroupId == "60" %}

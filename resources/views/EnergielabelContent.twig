@@ -19,6 +19,7 @@
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
 {% endif %}
+{{ dump(item.data.properties )}}
 {% for prop in eigenschaften %}
     <p>Prop</p><br />
     {% if prop.group.names.propertyGroupId == "60" %}

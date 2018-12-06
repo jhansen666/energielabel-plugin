@@ -19,7 +19,7 @@
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
 {% endif %}
-{% for prop in item.data.properties %}
+{% for prop in eigenschaften %}
     <p>Prop</p><br />
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}

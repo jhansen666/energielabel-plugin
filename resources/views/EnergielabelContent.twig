@@ -12,7 +12,7 @@
 {% set hoechsteEffizienzIndexZwei = 0 %}
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
-{% if item.documents[0].data.properties is none %}
+{% if services.template.getCurrentTemplate() == 'tpl.category.item' or services.template.getCurrentTemplate() == 'tpl.search' %}
     {% set eigenschaften = item.data.properties %}
     <p>Zweig 1</p>
 {% else %}

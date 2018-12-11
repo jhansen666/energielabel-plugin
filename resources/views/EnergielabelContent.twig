@@ -15,9 +15,16 @@
 {% if services.template.getCurrentTemplate() == 'tpl.category.item' or services.template.getCurrentTemplate() == 'tpl.search' %}
     {% set eigenschaften = item.data.properties %}
     <p>Zweig 1</p>
-{% else %}
+{% elseif %}
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
+{% endif %}
+{% if item.data.properties is not null and item.documents[0].data.properties is null %}
+    <p>item.data.properties ist nicht leer</p>
+    {{ dump(item.data.properties)}}
+{% elseif item.data.properties is null and item.documents[0].data.properties is not null %}
+    <p>item.data.properties ist leer</p>
+    {{ dump(item.documents[0].data.properties )}}
 {% endif %}
 {% for prop in eigenschaften %}
     <p>Erfolg</p>

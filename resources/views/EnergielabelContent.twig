@@ -19,13 +19,6 @@
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
 {% endif %}
-{% if item.data.properties is not null %}
-    <p>item.data.properties ist nicht leer</p>
-    {{ dump(item.data.properties)}}
-{% elseif item.data.properties is null %}
-    <p>item.data.properties ist leer</p>
-    {{ dump(item.documents[0].data.properties )}}
-{% endif %}
 {% for prop in eigenschaften %}
     <p>Erfolg</p>
     {% if prop.group.names.propertyGroupId == "60" %}

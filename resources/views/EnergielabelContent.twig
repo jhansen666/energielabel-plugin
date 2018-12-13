@@ -13,15 +13,15 @@
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
 {% if services.template.getCurrentTemplate() == 'tpl.category.item' or services.template.getCurrentTemplate() == 'tpl.search' %}
-    {% set eigenschaften = item.data.properties | raw %}
+    {% set eigenschaften = {{ item.data.properties | raw }} %}
     <p>Zweig 1</p>
 {% else %}
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
 {% endif %}
-{% if item.data.properties | raw is null %}
+{% if {{ item.data.properties | raw }} is null %}
     <p>item.data.properties sind null</p>
-{% elseif item.data.properties | raw is not null %}
+{% elseif {{ item.data.properties | raw }} is not null %}
     <p>item.data.properties sind nicht null</p>
 {% endif %}
 {% if item.documents[0].data.properties is null %}

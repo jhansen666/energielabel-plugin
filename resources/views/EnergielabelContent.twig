@@ -15,7 +15,7 @@
 {% if services.template.getCurrentTemplate() == 'tpl.category.item' or services.template.getCurrentTemplate() == 'tpl.search' %}
     {% set eigenschaften = item.data.properties %}
     <p>Zweig 1</p>
-{% elseif %}
+{% else %}
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
 {% endif %}

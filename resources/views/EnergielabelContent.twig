@@ -13,16 +13,16 @@
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
 {% if services.template.getCurrentTemplate() == 'tpl.category.item' or services.template.getCurrentTemplate() == 'tpl.search' %}
-    {% set eigenschaften = documents.[0].data.variationProperties %}
+    {% set eigenschaften = item.data.properties %}
     <p>Zweig 1</p>
 {% else %}
     {% set eigenschaften = item.documents[0].data.properties %}
     <p>Zweig 2</p>
 {% endif %}
-{% if documents.[0].data.variationProperties is null %}
-    <p>documents.[0].data.variationProperties sind null</p>
-{% elseif documents.[0].data.variationProperties  is not null %}
-    <p>documents.[0].data.variationProperties sind nicht null</p>
+{% if item.data.properties is null %}
+    <p>item.data.properties sind null</p>
+{% elseif item.data.properties is not null %}
+    <p>item.data.properties sind nicht null</p>
 {% endif %}
 {% if item.documents[0].data.properties is null %}
     <p>item.documents[0].data.properties sind null</p>

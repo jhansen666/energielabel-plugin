@@ -24,6 +24,11 @@
 {% elseif item.data.properties is not null %}
     <p>item.data.properties sind nicht null</p>
 {% endif %}
+{% if item.documents[0].data.properties is null %}
+    <p>item.documents[0].data.properties sind null</p>
+{% elseif item.documents[0].data.properties is not null %}
+    <p>item.documents[0].data.properties sind nicht null</p>
+{% endif %}
 {% for prop in eigenschaften %}
     <p>Erfolg</p>
     {% if prop.group.names.propertyGroupId == "60" %}

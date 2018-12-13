@@ -21,7 +21,7 @@
 {% endif %}
 {% if item.data.properties | raw is null %}
     <p>item.data.properties sind null</p>
-{% elseif item.data.properties is not null %}
+{% elseif item.data.properties | raw is not null %}
     <p>item.data.properties sind nicht null</p>
 {% endif %}
 {% if item.documents[0].data.properties is null %}

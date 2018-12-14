@@ -8,6 +8,6 @@ class ContentProvider
 {
     public function call(Twig $twig)
     {
-        return $twig->render('Energieeffizienzlabel::EnergielabelContent');
+        return $twig->render('Energieeffizienzlabel::Item.EnergielabelItem');
     }
 }

@@ -12,23 +12,7 @@
 {% set hoechsteEffizienzIndexZwei = 0 %}
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
-{% if services.template.getCurrentTemplate() == 'tpl.category.item' or services.template.getCurrentTemplate() == 'tpl.search' %}
-    {% set eigenschaften = item.data.properties %}
-    <p>Zweig 1</p>
-{% else %}
-    {% set eigenschaften = item.documents[0].data.properties %}
-    <p>Zweig 2</p>
-{% endif %}
-{% if item.data.properties is null %}
-    <p>item.data.properties sind null</p>
-{% elseif item.data.properties is not null %}
-    <p>item.data.properties sind nicht null</p>
-{% endif %}
-{% if item.documents[0].data.properties is null %}
-    <p>item.documents[0].data.properties sind null</p>
-{% elseif item.documents[0].data.properties is not null %}
-    <p>item.documents[0].data.properties sind nicht null</p>
-{% endif %}
+{% set eigenschaften = item.data.properties %}
 {% for prop in eigenschaften %}
     <p>Erfolg</p>
     {% if prop.group.names.propertyGroupId == "60" %}

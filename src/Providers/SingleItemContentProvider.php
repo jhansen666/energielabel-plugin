@@ -4,7 +4,7 @@ namespace Energieeffizienzlabel\Providers;
 
 use Plenty\Plugin\Templates\Twig;
 
-class ContentProvider
+class SingleItemContentProvider
 {
     public function call(Twig $twig)
     {

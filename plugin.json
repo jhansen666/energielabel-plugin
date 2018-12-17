@@ -12,9 +12,10 @@
     "dataProviders"     :
     [
         {
-            "key"       :   "Energieeffizienzlabel\\Providers\\ContentProvider",
+            "key"       :   "Energieeffizienzlabel\\Providers\\SingleItemContentProvider",
             "name"      :   "Energielabel für Produkte",
             "description":  "Einbinden des Energielabels" 
-        }
+        },
+
     ]
 }

@@ -1,7 +1,7 @@
 {
     "version"           :   "0.7.0",
     "license"           :   "MIT",
-    "name"              :   "Energieeffizienzlabel",
+    "name"              :   "Energieeffizienzlabel-Plugin",
     "shortDescription"  :   { "de": "Plugin zur Anzeige der Energielabel", "en": "TODO add manually" },
     "namespace"         :   "Energieeffizienzlabel",
     "author"            :   "Jan Hendrik Hansen",
@@ -19,7 +19,7 @@
         {
             "key"       :   "Energieeffizienzlabel\\Providers\\CategoryItemContentProvider",
             "name"      :   "Energieeffizienzlabel für Produkte(Kategorie)",
-            "description": "Einbinden des Energielabels auf Kategorieebene"
+            "description":  "Einbinden des Energielabels auf Kategorieebene"
         }   
 
     ]

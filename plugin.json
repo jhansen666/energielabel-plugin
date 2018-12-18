@@ -15,12 +15,6 @@
             "key"       :   "Energieeffizienzlabel\\Providers\\SingleItemContentProvider",
             "name"      :   "Energielabel für Produkte(Artikelansicht)",
             "description":  "Einbinden des Energielabels in der Artikelansicht" 
-        },
-        {
-            "key"       :   "Energieeffizienzlabel\\Providers\\CategoryItemContentProvider",
-            "name"      :   "Energieeffizienzlabel für Produkte(Kategorie)",
-            "description":  "Einbinden des Energielabels auf den Kategorie und Suchseiten"
         }
-
     ]
 }

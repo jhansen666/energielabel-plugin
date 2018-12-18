@@ -1,7 +1,7 @@
 {
     "version"           :   "0.7.0",
     "license"           :   "MIT",
-    "name"              :   "Energieeffizienzlabel-Plugin",
+    "name"              :   "Energieeffizienzlabel",
     "shortDescription"  :   { "de": "Plugin zur Anzeige der Energielabel", "en": "TODO add manually" },
     "namespace"         :   "Energieeffizienzlabel",
     "author"            :   "Jan Hendrik Hansen",

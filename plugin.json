@@ -1,5 +1,5 @@
 {
-    "version"           :   "0.7.1",
+    "version"           :   "0.7.0",
     "license"           :   "MIT",
     "name"              :   "Energieeffizienzlabel",
     "shortDescription"  :   { "de": "Plugin zur Anzeige der Energielabel", "en": "TODO add manually" },
@@ -14,7 +14,13 @@
         {
             "key"       :   "Energieeffizienzlabel\\Providers\\SingleItemContentProvider",
             "name"      :   "Energielabel für Produkte(Artikelansicht)",
-            "description":  "Einbinden des Energielabels in der Artikelansicht" 
-        }
+            "description":  "Einbinden des Energielabels auf Artikelebene" 
+        },
+        {
+            "key"       :   "Energieeffizienzlabel\\Providers\\CategoryItemContentProvider",
+            "name"      :   "Energieeffizienzlabel für Produkte(Kategorie)",
+            "description": "Einbinden des Energielabels auf Kategorieebene"
+        }   
+
     ]
 }

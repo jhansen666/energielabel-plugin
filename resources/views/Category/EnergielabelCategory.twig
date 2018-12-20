@@ -13,6 +13,7 @@
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
 {% set eigenschaften = item.data.properties %}
+{{ effizienzLabelWerte[1] }}
 {% for prop in eigenschaften %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}

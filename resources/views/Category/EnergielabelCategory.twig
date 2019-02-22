@@ -15,27 +15,27 @@
 {% set eigenschaften = item.data.properties %}
 {{ effizienzLabelWerte[1] }}
 {% for prop in eigenschaften %}
-    {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}
            {# {{ prop.property.names.name }}:  {{ prop.texts.value }} 
            {{ prop.texts.value }} #}
             {% if energieEffizienz is not empty and energieEffizienzName is not empty %}
-                {% set energieEffizienzZwei = prop.texts.value %}
-                {% set energieEffizienzNameZwei = prop.property.names.name %}
+                {% set energieEffizienzZwei = prop.selection.name %}
+                {% set energieEffizienzNameZwei = prop.texts.value %}
             {% else %}
-                {% set energieEffizienz = prop.texts.value %}
-                {% set energieEffizienzName = prop.property.names.name %}
+                {% set energieEffizienz = prop.selection.name %}
+                {% set energieEffizienzName = prop.texts.value %}
             {% endif %}
         {% endif %}
+        {{ energieEffizienz }}
+        {{ energieEffizienzName}}
         {% if prop.property.id in [492, 493, 494, 495, 496 ] %}
             {% if hoechsteEffizienz is not empty %}
-                {% set hoechsteEffizienzZwei = prop.texts.value %}
+                {% set hoechsteEffizienzZwei = prop.selection.name %}
             {% else %}
-                {% set hoechsteEffizienz = prop.texts.value %}
+                {% set hoechsteEffizienz = prop.selection.name %}
             {% endif %}
         {% endif %}
-    {% endif %}
 {% endfor %}
 {% if energieEffizienz is not empty and hoechsteEffizienz is not empty %}
     {% for wert in effizienzLabelWerte %}

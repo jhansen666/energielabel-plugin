@@ -13,6 +13,8 @@
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
 {% set eigenschaften = item.data.properties %}
+{% set notname = 'nicht Name' %}
+{% set name = 'Name' %}
 {{ effizienzLabelWerte[1] }}
 {% for prop in eigenschaften %}
         {# 492, 493, 494, 495, 496 #}
@@ -27,9 +29,9 @@
                 {% set energieEffizienzName = prop.texts.value %}
             {% endif %}
         {% endif %}
-        {{ "Nicht Name" }}
+        {{ notname }}
         {{ energieEffizienz }}
-        {{ "Name" }}
+        {{ name }}
         {{ energieEffizienzName}}
         {% if prop.property.id in [492, 493, 494, 495, 496 ] %}
             {% if hoechsteEffizienz is not empty %}

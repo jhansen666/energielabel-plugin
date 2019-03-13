@@ -12,9 +12,6 @@
 {% set hoechsteEffizienzIndexZwei = 0 %}
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
-<span v-for="(variationProperty) in itemData.documents[0].data.variationProperties">
-	  ${ variationProperty.property.names.name }
-</span>
 {% for prop in properties %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}

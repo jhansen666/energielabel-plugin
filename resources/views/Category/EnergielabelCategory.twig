@@ -14,6 +14,7 @@
 {% set energieEffizienzNameZwei = "" %}
 {{ "Hallo" }}
 {% for prop in item.data.properties %}
+{{ prop.group.names.description }}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}

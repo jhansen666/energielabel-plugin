@@ -2,5 +2,6 @@
 {{ "Hallo" }}
 {{item.data | json_encode }}
 {% for prop in item.data.properties %}
+    {{ "Hi" }}
     {{ prop.group.names.description }}
 {% endfor %}

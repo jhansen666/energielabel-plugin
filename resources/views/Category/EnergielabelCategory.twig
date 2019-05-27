@@ -1,8 +1,9 @@
 
 {{ "Hallo" }}
 {{item.data | json_encode }}
-<div v-for="properties">
+<div v-for="prop in properties">
     <p>Hier ist ne Eigenschaft</p>
+    ${ prop.group.names.description }
 </div>
 {% for prop in item.data.properties %}
     {{ "Hi" }}

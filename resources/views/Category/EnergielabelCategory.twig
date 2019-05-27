@@ -12,9 +12,8 @@
 {% set hoechsteEffizienzIndexZwei = 0 %}
 {% set energieEffizienzName = "" %}
 {% set energieEffizienzNameZwei = "" %}
-{% set eigenschaften = item.data.properties %}
 {{ "Hallo" }}
-{% for prop in eigenschaften %}
+{% for prop in item.data.properties %}
     {% if prop.group.names.propertyGroupId == "60" %}
         {# 492, 493, 494, 495, 496 #}
         {% if prop.property.id in [406, 407, 482, 487, 488] %}

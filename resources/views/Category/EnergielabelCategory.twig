@@ -1,6 +1,6 @@
 
-{{ "Hallo" }}
-{% for prop in item.documents[0].data.properties %}
-    {{ "Hi" }}
-    {{ prop.group.names.description }}
-{% endfor %}
+<template v-for="(property, index) in itemData.properties">
+    <div v-if="property.group.id == 60">
+        <p>Hallo</p> {# für den Wert eines Merkmals vom Typ Text #}
+    </div>
+</template>

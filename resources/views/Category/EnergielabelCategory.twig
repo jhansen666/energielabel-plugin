@@ -5,6 +5,6 @@
     {{ "Hi" }}
     {{ prop.group.names.description }}
 {% endfor %}
-<p class="prop" v-for="itemProp in item.properties">
-Eine Property! <br />
+<p class="prop" v-if="item.properties">
+    Eine Property! <br />
 </p>

@@ -1,6 +1,5 @@
 
 {{ "Hallo" }}
-{{ item.data | json_encode }}
 {% for prop in item.documents[0].data.properties %}
     {{ "Hi" }}
     {{ prop.group.names.description }}
